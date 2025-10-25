@@ -1,0 +1,60 @@
+# ===========================
+# 🧩 Workout Tracker Git Ignore
+# ===========================
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files (private keys, API secrets, etc.)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Build / Output directories
+dist/
+build/
+coverage/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+.history/
+
+# OS-specific temp files
+*.tmp
+*.swp
+*.swo
+
+# Backend specific
+*.db
+database.sqlite
+
+# Firebase / Hosting caches (if used)
+.firebase/
+.firebaserc
+
+# Python virtual env (if you use Flask later)
+venv/
+__pycache__/
+
+# IDE project settings
+.idea/
+*.iml
+
+# Optional: screenshots and local test data
+docs/screenshots/
+data/sample-data.json
