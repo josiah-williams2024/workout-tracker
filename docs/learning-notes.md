@@ -1,43 +1,102 @@
-# 🧠 Learning Notes – Workout Tracker
-**Author:** Josiah Williams
-**Project Type:** Full-Stack PWA
-**Start Date:** OCTOBER 2025
-**GOAL** Document weekly progress, new concepts learned, and challenges while building the Workout Tracker app.
+# 🧩 Learning Notes – Workout Tracker
 
-**Note:**
-- Depending on my availability, I may complete multiple phases quickly if time permits.  
-- The focus is on learning and building at a steady pace, not on fixed deadlines.
----
-
-### 🧩 Phase 0 – Setup & Environment
-**Focus:**  
-- Set up development environment (VS Code, Git, Node, browser tools).  
-- Create GitHub repo, folders, and initial documentation (`README.md`, `project-plan.md`, `learning-notes.md`).  
-
-**What I Learned:**  
-
-
-**Challenges:**  
- 
-
-**Next Phase Goal:**  
-Begin front-end rebuild.
+**Author:** Josiah Williams  
+**Purpose:** Technical reference notes and commands learned during the project.
 
 ---
 
-### 🧩 Phase 1 – Front-End Rebuild (Week 1)
-**Focus:**  
-- Rebuild core HTML, CSS, and JS interface.  
-- Create form and workout list for adding/displaying entries.  
+## 🧠 Phase 1 Notes
 
-**What I Learned:**  
+### 🔹 Git Commands
 
+#### Command: `git init`
+**Explanation:**
+- Creates a hidden `.git/` folder that tracks changes to your files.  
+- Tells Git, “start tracking this project.”  
 
-**Challenges:**  
-
-
-**Next Phase Goal:**  
-Add delete and edit functionality.
+**When to Use:**
+- Only once per new project (before any commits).
 
 ---
-**Made with ❤️ by Josiah Williams** 
+
+#### Command: `git add .`
+**Explanation:**
+- Prepares files for committing.  
+- The `.` means “everything in this folder.”  
+
+**When to Use:**
+- Every time you make changes before committing.
+
+---
+
+#### Command: `git commit -m "Initial setup with docs and frontend"`
+**Explanation:**
+- Creates a permanent snapshot of your project.  
+- The `-m` stands for “message.”  
+
+**When to Use:**
+- After `git add .`, to record your changes locally.
+
+---
+
+#### Command: `git status`
+**Explanation:**
+- Lists new, modified, or deleted files.  
+- Tells you if your branch is ahead/behind GitHub.  
+
+**When to Use:**
+- Anytime you want to check what’s changed before committing or pushing.
+
+---
+
+#### Command: `git branch -M main`
+**Explanation:**
+- “Main” is now the default branch name for modern Git repos.  
+- The `-M` means “move” (rename forcefully).  
+
+**When to Use:**
+- After initializing a new repo (usually only once).
+
+---
+
+#### Command: `git remote add origin https://github.com/josiah-williams2024/workout-tracker.git`
+**Explanation:**
+- “origin” is the default nickname for your remote GitHub link.  
+- This tells Git where to push your commits online.  
+
+**When to Use:**
+- The first time you set up a project with GitHub.
+
+---
+
+#### Command: `git push -u origin main`
+**Explanation:**
+- Sends your commits to your GitHub repository.  
+- The `-u` means “set upstream” — Git will remember this link so later you can just use `git push`.  
+
+**When to Use:**
+- After committing, to upload your latest version online.
+
+---
+
+#### Command: `git pull`
+**Explanation:**
+- Syncs your local repo with the remote version.  
+
+**When to Use:**
+- Before you start working, or if you made changes on another device.
+
+---
+
+#### Command: `git log`
+**Explanation:**
+- Displays commit IDs, messages, authors, and dates.  
+
+**When to Use:**
+- To review what you’ve done or confirm your last commit message.
+
+---
+
+### 🧱 Markdown (.md)
+**Explanation:**
+- Markdown is a simple text formatting language that turns plain text into nicely formatted documents (like `README.md` files on GitHub).
