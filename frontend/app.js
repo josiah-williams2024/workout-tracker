@@ -10,12 +10,12 @@ form.addEventListener("submit",(e) => {
 e.preventDefault(); //Stop page reload
 
 //Read input values
-const name = document.getElementById('workoutName').value.Trim();
+const name = document.getElementById('workoutName').value.trim();
 const type = document.getElementById('workoutType').value;
-const duration = document.getElementById('workoutDuration').value;
+const duration = document.getElementById('duration').value;
 const date = document.getElementById('date').value;
 
-//Create a wrokout object
+//Create a workout object
 const workout = {
     name,
     type,
@@ -24,7 +24,7 @@ const workout = {
 };
 
 //Add workout to array
-workouts.push(workouts);
+workouts.push(workout);
 
 //Clear form
 form.reset();
@@ -43,13 +43,13 @@ function displayWorkouts(){
 workoutList.innerHTML = "";
 
 workouts.forEach((workout) => {
-const list = document.createElement('list');
-list.innerHTML = `
+const listItem = document.createElement('li');
+listItem.innerHTML = `
 <strong>${workout.name}</strong> (${workout.type})<br>
 Duration: ${workout.duration} mins <br>
 Date: ${workout.date}
 `;
-workoutList.appendChild(list);
+workoutList.appendChild(listItem);
 });
 }
 
