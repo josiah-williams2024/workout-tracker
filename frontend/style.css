@@ -9,6 +9,7 @@ h1,h2 {
 }
 
 form{
+    margin-bottom: 12px;  
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -20,13 +21,14 @@ form{
 }
 
 label{
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 4px; 
     font-weight: bold;
 }
 
 input, select, button{
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 3px; 
     border: 1px solid #ccc;
     border-radius:5px;
 }
@@ -54,4 +56,30 @@ li{
     margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);;
+}
+
+.strength-row {
+    display: flex;
+    gap: 20px;
+}
+
+.strength-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#durationSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#durationSection label {
+    margin-bottom: 5px;
+}
+
+#duration {
+    width: 100% !important;
+    box-sizing: border-box;
 }
