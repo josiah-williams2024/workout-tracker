@@ -95,6 +95,14 @@
 **When to Use:**
 - To review what you’ve done or confirm your last commit message.
 
+**Git Steps**
+1. git pull
+2. git status
+3. After some Code
+4. git add . (or git add file1)
+5. git commit -mm "Describe changes"
+6. git push
+7. Helpful command:  git log
 ---
 
 ### 🧱 Markdown (.md)
