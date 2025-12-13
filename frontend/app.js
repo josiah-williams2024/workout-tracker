@@ -1,5 +1,5 @@
 //store all workouts in an array
-const workouts = [];
+let workouts = [];
 var editingID = null;
 
 //Select DOM elements
@@ -10,6 +10,27 @@ const workoutTypeSelect = document.getElementById("workoutType");
 const durationSection = document.getElementById("durationSection");
 const strengthSection = document.getElementById("strengthSection");
 
+/* ===========================================================
+Function: saveWorkouts
+Description: Save the workouts on local storage
+Parameters: None
+Returns: None
+==============================================================*/
+function saveWorkouts(){
+    localStorage.setItem("workouts", JSON.stringify(workouts));
+}
+/* ===========================================================
+Function: loadWorkOuts
+Description: Laod the workouts from local storage
+Parameters: None
+Returns: None
+==============================================================*/
+function loadWorkOuts(){
+    const saved = localStorage.getItem("workouts");
+    if(saved){
+        workouts = JSON.parse(saved);
+    }
+}
 // Switch fields based on workout type
 workoutTypeSelect.addEventListener("change", updateFormFields);
 
@@ -44,6 +65,8 @@ function updateFormFields() {
 
 // Call once on page load
 updateFormFields();
+loadWorkOuts();
+displayWorkouts();
 //Handle Form Submission
 form.addEventListener("submit",(e) => {
 e.preventDefault(); //Stop page reload
@@ -103,6 +126,7 @@ workouts.push(workout);
 form.reset();
 
 //Refresh displayed list
+saveWorkouts();
 displayWorkouts();
 });
 
@@ -147,6 +171,7 @@ Returns: None
 function deleteWorkout(id){
     const index = workouts.findIndex(w => w.id == id); //find item by array index 
     workouts.splice(index,1); //remove item from workout array
+    saveWorkouts();
     displayWorkouts();
 }
 /* ===========================================================
